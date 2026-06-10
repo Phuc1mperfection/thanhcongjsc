@@ -1,0 +1,218 @@
+{
+  "categories": [
+    {
+      "id": "bridge-bearings",
+      "nameEn": "Bridge Bearings",
+      "nameVn": "Gối cầu",
+      "image": "bearing",
+      "accent": "from-amber-600/80 to-amber-400/30",
+      "shortDescription": "Gối cầu là thiết bị kết cấu quan trọng trong công trình cầu đường, có nhiệm vụ truyền tải trọng từ kết cấu nhịp xuống mố, trụ cầu, đồng thời cho phép các chuyển vị tịnh tiến và xoay phát sinh trong quá trình khai thác, qua đó đảm bảo khả năng làm việc ổn định, an toàn và bền vững của công trình.",
+      "description": "Gối cầu chịu lực truyền tải trọng từ kết cấu nhịp xuống mố trụ, hấp thụ dịch chuyển và chuyển vị. Thiết kế theo tiêu chuẩn quốc tế, tuổi thọ cao.",
+      "subcategories": [
+        {
+          "name": "Gối chậu (Pot Bearing)",
+          "description": "Loại gối cầu chịu tải trọng lớn, sử dụng cao su đàn hồi bị giam kín trong chậu thép để truyền tải trọng thẳng đứng từ kết cấu nhịp xuống trụ, mố cầu.",
+          "features": [
+            "Khả năng chịu tải lớn, phù hợp cho cầu trung và cầu lớn",
+            "Chuyển vị quay ổn định, độ biến dạng nhỏ",
+            "Ma sát thấp, đảm bảo chuyển vị êm thuận",
+            "Độ bền cao, tuổi thọ lâu dài"
+          ]
+        },
+        {
+          "name": "Gối chỏm cầu (Spherical Bearing)",
+          "description": "Loại gối cầu chịu tải trọng rất lớn, sử dụng bề mặt chỏm cầu bằng thép kết hợp với vật liệu trượt ma sát thấp (PTFE/Inox).",
+          "features": [
+            "Khả năng chịu tải rất lớn",
+            "Cho phép quay đa hướng, thích ứng tốt với biến dạng",
+            "Ma sát thấp, chuyển vị ổn định và chính xác",
+            "Phù hợp các tiêu chuẩn thiết kế quốc tế"
+          ]
+        },
+        {
+          "name": "Gối cao su đàn hồi (Elastomeric Rubber Bearing)",
+          "description": "Loại gối cầu sử dụng cao su tự nhiên hoặc cao su tổng hợp kết hợp với bản thép gia cường.",
+          "features": [
+            "Đàn hồi cao, cho phép quay và chuyển vị tự nhiên",
+            "Hấp thụ rung động, giảm tác động do tải trọng động",
+            "Kết cấu đơn giản, dễ lắp đặt và bảo trì",
+            "Chi phí hợp lý, hiệu quả kinh tế cao"
+          ]
+        },
+        {
+          "name": "Gối đĩa (Disc Bearing)",
+          "description": "Loại gối cầu sử dụng đĩa đàn hồi polymer (thường là polyurethane) làm bộ phận chịu nén chính.",
+          "features": [
+            "Chịu tải trọng rất lớn",
+            "Khả năng quay cao, không phụ thuộc vào biến dạng cao su",
+            "Chuyển vị chính xác, kiểm soát tốt biến dạng kết cấu",
+            "Độ bền cao, ổn định lâu dài"
+          ]
+        }
+      ],
+      "applications": [
+        "Cầu đường bộ, cầu vượt, cầu cao tốc",
+        "Cầu có tải trọng lớn hoặc nhịp dài",
+        "Công trình yêu cầu độ ổn định và tuổi thọ cao"
+      ]
+    },
+    {
+      "id": "expansion-joints",
+      "nameEn": "Expansion Joints",
+      "nameVn": "Khe co giãn",
+      "image": "expansion",
+      "accent": "from-blue-600/90 to-blue-400/40",
+      "shortDescription": "Khe co giãn là bộ phận kỹ thuật được bố trí tại các vị trí gián đoạn của kết cấu công trình nhằm cho phép các cấu kiện giãn nở hoặc co lại do ảnh hưởng của nhiệt độ, tải trọng, co ngót vật liệu hoặc chuyển vị.",
+      "description": "Hệ thống khe co giãn cho cầu và công trình giao thông, đáp ứng dịch chuyển nhiệt và tải trọng động. Đa dạng dải dịch chuyển, độ bền cao và bảo trì thuận tiện.",
+      "subcategories": [
+        {
+          "name": "Khe co giãn dạng cao su (Rubber Expansion Joints)",
+          "description": "Sử dụng dải cao su đàn hồi, chống thấm nước và có khả năng biến dạng tốt.",
+          "features": [
+            "Độ đàn hồi cao, cho phép chuyển vị theo phương ngang và phương đứng",
+            "Chống thấm hiệu quả, bảo vệ kết cấu bên dưới",
+            "Giảm tiếng ồn và rung động khi xe chạy qua",
+            "Thi công đơn giản, dễ thay thế và bảo trì"
+          ]
+        },
+        {
+          "name": "Khe co giãn dạng ray (Rail-Type Expansion Joints)",
+          "description": "Sử dụng hệ ray thép kết hợp với cao su đàn hồi, được thiết kế để đáp ứng chuyển vị lớn.",
+          "features": [
+            "Khả năng chịu tải lớn, phù hợp giao thông nặng",
+            "Cho phép chuyển vị lớn, có thể thiết kế theo yêu cầu dự án",
+            "Đảm bảo độ êm thuận khi xe chạy qua",
+            "Tuổi thọ cao, dễ bảo trì, thay thế từng module"
+          ]
+        },
+        {
+          "name": "Khe co giãn răng lược (Finger Expansion Joints)",
+          "description": "Sử dụng các bản thép dạng răng lược ăn khớp với nhau, cho phép mặt cầu giãn nở với chuyển vị rất lớn.",
+          "features": [
+            "Cho phép chuyển vị rất lớn (có thể lên đến hàng trăm mm)",
+            "Chịu tải trọng xe nặng, phù hợp cầu cao tốc",
+            "Kết cấu thép cường độ cao, độ bền ổn định lâu dài",
+            "Thoát nước tốt, hạn chế ứ đọng"
+          ]
+        },
+        {
+          "name": "Khe co giãn dạng mô đun (Modular-Type Expansion Joints)",
+          "description": "Được cấu tạo từ nhiều dầm ray thép song song (module) kết hợp với cao su đàn hồi.",
+          "features": [
+            "Khả năng chuyển vị rất lớn, có thể thiết kế theo yêu cầu dự án",
+            "Chịu tải trọng và lưu lượng giao thông cao",
+            "Đảm bảo độ êm thuận khi xe chạy qua",
+            "Cho phép bảo trì, thay thế từng mô đun riêng lẻ"
+          ]
+        }
+      ],
+      "applications": [
+        "Cầu nhịp lớn, cầu dây văng, cầu dầm liên tục",
+        "Cầu đô thị có mật độ giao thông cao",
+        "Công trình hạ tầng giao thông yêu cầu độ bền cao"
+      ]
+    },
+    {
+      "id": "noise-barriers",
+      "nameEn": "Noise Barriers",
+      "nameVn": "Tường chống ồn",
+      "image": "noise",
+      "accent": "from-orange-600/70 to-orange-400/20",
+      "shortDescription": "Tường chống ồn là công trình hoặc hạng mục kỹ thuật được lắp đặt dọc theo các tuyến giao thông, khu công nghiệp hoặc khu dân cư nhằm giảm thiểu tiếng ồn truyền từ nguồn phát đến khu vực cần bảo vệ.",
+      "description": "Hệ thống tường chống ồn cho cao tốc và đường đô thị, giảm tiếng ồn giao thông hiệu quả. Vật liệu đa dạng, thẩm mỹ và bền vững. Có thể hoạt động theo cơ chế phản âm, tiêu âm hoặc kết hợp cả hai.",
+      "subcategories": [
+        {
+          "name": "Tường tiêu âm (Sound Absorbing Barriers)",
+          "description": "Giảm tiếng ồn bằng cách hấp thụ năng lượng âm thanh, hạn chế phản xạ.",
+          "features": [
+            "Hấp thụ âm thanh hiệu quả",
+            "Chất lượng âm thanh tốt",
+            "Ứng dụng cho khu dân cư, trường học"
+          ]
+        },
+        {
+          "name": "Tường phản âm (Sound Reflective Barriers)",
+          "description": "Phản xạ sóng âm ra xa khu vực cần bảo vệ.",
+          "features": [
+            "Phản xạ âm thanh hiệu quả",
+            "Bảo vệ tối đa cho khu vực phía sau",
+            "Ứng dụng cho cao tốc, đường chính"
+          ]
+        }
+      ],
+      "applications": [
+        "Đường cao tốc",
+        "Đường vành đai",
+        "Khu dân cư",
+        "Trường học, bệnh viện"
+      ]
+    },
+    {
+      "id": "geotechnical",
+      "nameEn": "Geotechnical Solutions",
+      "nameVn": "Giải pháp địa kỹ thuật",
+      "image": "geo",
+      "accent": "from-slate-700/80 to-slate-500/30",
+      "shortDescription": "Các giải pháp địa kỹ thuật được áp dụng nhằm ổn định nền đất, mái dốc và công trình hạ tầng, đảm bảo an toàn, bền vững và hiệu quả kinh tế trong thi công và khai thác lâu dài.",
+      "description": "Giải pháp tổng thể cho gia cố nền đất yếu, ổn định mái dốc và thoát nước công trình. Vật liệu đạt chuẩn ASTM và TCVN.",
+      "subcategories": [
+        {
+          "name": "Lưới chống xói (Erosion Control Systems)",
+          "description": "Được sử dụng để chống xói mòn, rửa trôi đất do mưa, dòng chảy mặt, sóng hoặc thủy triều.",
+          "features": [
+            "Chống xói mòn và ổn định bề mặt hiệu quả",
+            "Khả năng thoát nước tốt, không gây ứ nước mặt",
+            "Độ bền cao, chịu tia UV và môi trường khắc nghiệt",
+            "Thân thiện môi trường, hỗ trợ phủ xanh mái dốc"
+          ]
+        },
+        {
+          "name": "Lưới thép chống đá rơi (Rockfall Protection Systems)",
+          "description": "Được sử dụng để ngăn chặn, kiểm soát và giảm thiểu nguy cơ đá lăn, đá rơi từ các sườn núi.",
+          "features": [
+            "Khả năng chịu lực và hấp thụ năng lượng cao",
+            "Ngăn chặn hiệu quả đá lăn, đá rơi và sạt trượt",
+            "Độ bền cao, chịu được điều kiện thời tiết khắc nghiệt",
+            "Thi công nhanh, ít tác động đến địa hình"
+          ]
+        },
+        {
+          "name": "Lưới địa gia cường (Fiberglass Geogrids)",
+          "description": "Sản xuất từ sợi thủy tinh cường độ cao, phủ lớp polymer bảo vệ.",
+          "features": [
+            "Cường độ chịu kéo cao, ổn định theo cả hai phương",
+            "Độ giãn dài thấp, giúp hạn chế biến dạng và nứt mặt đường",
+            "Khả năng bám dính tốt với bê tông nhựa",
+            "Tuổi thọ cao, phù hợp công trình hạ tầng lâu dài"
+          ]
+        },
+        {
+          "name": "Tường chắn có cốt (Reinforced Retaining Walls)",
+          "description": "Sử dụng vật liệu gia cường (lưới địa, dải cốt, thép) kết hợp với khối đất đắp.",
+          "features": [
+            "Khả năng chịu lực và ổn định cao",
+            "Độ bền lâu dài, ít biến dạng",
+            "Thi công nhanh, chi phí tối ưu",
+            "Dễ kết hợp phủ xanh và cảnh quan"
+          ]
+        },
+        {
+          "name": "Gia cố mái taluy (Slope Reinforcement)",
+          "description": "Giải pháp kỹ thuật nhằm ổn định mái dốc, mái đào và mái đắp.",
+          "features": [
+            "Tăng khả năng ổn định mái dốc, chống sạt trượt hiệu quả",
+            "Giảm thiểu xói mòn do mưa, dòng chảy và thời tiết",
+            "Thi công linh hoạt, phù hợp nhiều điều kiện địa hình",
+            "Có thể kết hợp giải pháp sinh thái, thân thiện môi trường"
+          ]
+        }
+      ],
+      "applications": [
+        "Đường cao tốc",
+        "Đê kè",
+        "Bãi chôn lấp",
+        "Hồ chứa"
+      ]
+    }
+  ]
+}
