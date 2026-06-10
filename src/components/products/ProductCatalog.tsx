@@ -2,6 +2,18 @@ import { useEffect, useRef, useState } from "react";
 import { ProductCard } from "./ProductCard";
 import productsData from "@/data/products.json";
 
+interface Subcategory {
+  name: string;
+  description: string;
+  features: string[];
+  concept: string;
+  structure: string[];
+  technicalHighlights: string[];
+  classification?: string[];
+  variants?: Array<{ name: string; description: string; features: string[] }>;
+  applications: string[];
+}
+
 interface Product {
   id: string;
   nameEn: string;
@@ -9,8 +21,10 @@ interface Product {
   image: string;
   icon: string;
   accent: string;
+  shortDescription: string;
   description: string;
-  subcategories: Array<{ name: string; icon: string }>;
+  catalogue: string;
+  subcategories: Subcategory[];
   applications: string[];
 }
 
@@ -36,7 +50,7 @@ export function ProductCatalog() {
     return () => observer.disconnect();
   }, []);
 
-  const products = (productsData.categories as Product[]) || [];
+  const products = (productsData.categories as unknown as Product[]) || [];
 
   return (
     <section

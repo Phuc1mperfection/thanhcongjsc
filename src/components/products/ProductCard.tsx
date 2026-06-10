@@ -3,7 +3,14 @@ import { ChevronDown } from "lucide-react";
 
 interface Subcategory {
   name: string;
-  icon: string;
+  description: string;
+  features: string[];
+  concept: string;
+  structure: string[];
+  technicalHighlights: string[];
+  classification?: string[];
+  variants?: Array<{ name: string; description: string; features: string[] }>;
+  applications: string[];
 }
 
 interface Product {
@@ -13,7 +20,9 @@ interface Product {
   image: string;
   icon: string;
   accent: string;
+  shortDescription: string;
   description: string;
+  catalogue: string;
   subcategories: Subcategory[];
   applications: string[];
 }
