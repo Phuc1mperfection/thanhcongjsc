@@ -1,6 +1,5 @@
-/* eslint-disable prettier/prettier */
 import { Mail, Globe, Phone, MapPin } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/brand/logo-white.png";
 
 export function Footer() {
   return (
@@ -8,9 +7,7 @@ export function Footer() {
       <div className="container-tc py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
-            <div className="bg-white rounded-md p-1.5">
-              <img src={logo} alt="Thanh Cong JSC" width={36} height={36} className="h-9 w-9" />
-            </div>
+              <img src={logo} alt="Thanh Cong JSC" width={120} height={120}  />
             <div className="leading-tight">
               <div className="font-display font-bold text-base">
                 THANH CONG <span className="text-gold">JSC</span>

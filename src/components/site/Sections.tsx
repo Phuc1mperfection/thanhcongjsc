@@ -1,5 +1,3 @@
-/* eslint-disable prettier/prettier */
-// eslint-disable-next-line prettier/prettier
 import { ArrowRight, Download, ShieldCheck, Layers, Wrench, ChevronRight, Building2, Construction, Mountain, Volume2, HardHat, Activity, Ruler, BadgeCheck, Mail, MessageSquare, FileText, Globe, Phone, MapPin } from "lucide-react";
 import heroBridge from "@/assets/hero-bridge.jpg";
 import imgExpansion from "@/assets/product-expansion.jpg";
@@ -359,7 +357,7 @@ export function Applications() {
                 <Icon size={22} />
               </div>
               <div className="mt-4 font-display font-semibold text-deep">{label}</div>
-              <div className="mt-2 h-[2px] w-8 bg-gold/60" />
+              <div className="mt-2 h-0.5 w-8 bg-gold/60" />
             </div>
           ))}
         </div>
@@ -447,16 +445,17 @@ export function Catalogue() {
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a
-                href="#contact"
+                href="/catalogues/catalogue-thanhcong.pdf"
+                download
                 className="inline-flex items-center gap-2 rounded-md bg-gold px-6 py-3.5 text-sm font-semibold text-gold-foreground hover:brightness-95 transition"
               >
                 <Download size={16} /> Tải catalogue PDF
               </a>
               <a
-                href="#contact"
+                href="/catalogue"
                 className="inline-flex items-center gap-2 rounded-md border border-deep/20 bg-white px-6 py-3.5 text-sm font-semibold text-deep hover:border-gold hover:text-gold transition"
               >
-                Yêu cầu bản in
+                <FileText size={16} /> Xem catalogue
               </a>
             </div>
             <div className="mt-8 flex items-center gap-6 text-xs text-ink-soft">

@@ -1,4 +1,4 @@
-@import "tailwindcss" source(none);
+@import "tailwindcss";
 @source "../src";
 @import "tw-animate-css";
 
@@ -135,3 +135,8 @@
     linear-gradient(to bottom, rgba(46, 44, 112, 0.06) 1px, transparent 1px);
   background-size: 48px 48px;
 }
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@utility animate-fade-in { animation: fade-in 0.6s ease-out both; }
