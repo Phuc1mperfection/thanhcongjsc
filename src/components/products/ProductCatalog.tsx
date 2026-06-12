@@ -94,10 +94,10 @@ export function ProductCatalog() {
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          {products.map((product, index) => (
+          {products.map((category, index) => (
             <ProductCard
-              key={product.id}
-              product={product}
+              key={category.id}
+              category={category}
               index={index}
             />
           ))}

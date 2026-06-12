@@ -1,19 +1,21 @@
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown, type LucideIcon } from "lucide-react";
+import * as Icons from "lucide-react";
 
-interface Subcategory {
+export type SubCategory = {
   name: string;
+  icon?: string;
   description: string;
   features: string[];
   concept: string;
-  structure: string[];
-  technicalHighlights: string[];
+  structure?: string[];
+  technicalHighlights?: string[];
   classification?: string[];
   variants?: Array<{ name: string; description: string; features: string[] }>;
   applications: string[];
-}
+};
 
-interface Product {
+export type Category = {
   id: string;
   nameEn: string;
   nameVn: string;
@@ -23,151 +25,161 @@ interface Product {
   shortDescription: string;
   description: string;
   catalogue: string;
-  subcategories: Subcategory[];
+  subcategories: SubCategory[];
   applications: string[];
+};
+
+function Ico({ name, className }: { name: string; className?: string }) {
+  const Comp =
+    (Icons as unknown as Record<string, LucideIcon>)[name] ?? Icons.Circle;
+  return <Comp className={className} aria-hidden />;
 }
 
-interface ProductCardProps {
-  product: Product;
+const gradientMap: Record<string, string> = {
+  "bridge-bearings": "from-amber-600 to-amber-400",
+  "expansion-joints": "from-blue-600 to-blue-400",
+  "noise-barriers": "from-orange-600 to-orange-400",
+  geotechnical: "from-slate-700 to-slate-500",
+  maintenance: "from-slate-600 to-slate-400",
+};
+
+export function ProductCard({
+  category,
+  index,
+}: {
+  category: Category;
   index: number;
-}
-
-// Generate placeholder background based on product
-function getPlaceholderStyle(accent: string, id: string) {
-  const colors: Record<string, string> = {
-    "expansion-joints": "from-blue-600 to-blue-400",
-    "bridge-bearings": "from-amber-600 to-amber-400",
-    geotechnical: "from-slate-700 to-slate-500",
-    "noise-barriers": "from-orange-600 to-orange-400",
-    maintenance: "from-slate-600 to-slate-400",
-  };
-
-  return colors[id] || accent;
-}
-
-export function ProductCard({ product, index }: ProductCardProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const gradientClass = getPlaceholderStyle(product.accent, product.id);
+}) {
+  const [open, setOpen] = useState(false);
+  const gradientClass = gradientMap[category.id] || category.accent;
 
   return (
-    <div
-      className="group relative overflow-hidden rounded-2xl transition-all duration-700 hover:shadow-2xl"
+    <article
+      className="group relative flex flex-col rounded-2xl border border-deep/10 bg-card overflow-hidden shadow-(--shadow-card) transition-all duration-500 hover:-translate-y-2 hover:shadow-[var(--shadow-card-hover)] hover:border-gold/40 animate-fade-in opacity-0"
       style={{
-        animation: `slideUp 0.6s ease-out ${index * 0.1}s both`,
+        animationDelay: `${index * 110}ms`,
+        animationFillMode: "forwards",
       }}
     >
-      {/* Hero Background with Image or Placeholder */}
-      <div
-        className={`absolute inset-0 bg-gradient-to-br ${gradientClass} transition-all duration-500 group-hover:scale-105`}
-      >
-        {/* Animated background pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff),
-                              linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff)`,
-              backgroundSize: "60px 60px",
-              backgroundPosition: "0 0, 30px 30px",
-              backgroundRepeat: "repeat",
-            }}
-          />
+      {/* Image */}
+      <div className="relative h-52 overflow-hidden">
+        <img
+          src={`/images/${category.id}.jpg`}
+          alt={`${category.nameVn} - ${category.nameEn}`}
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-1200 group-hover:scale-110"
+          loading="lazy"
+        />
+        <div className={`absolute inset-0 bg-gradient-to-t ${category.accent} mix-blend-multiply`} />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        <div className="absolute top-4 left-4 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white/95 backdrop-blur text-deep shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
+          <Ico name={category.icon} className="w-6 h-6" />
         </div>
-
-        {/* Glossy overlay effect */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-black/30" />
+        <div className="absolute top-4 right-4 text-[10px] uppercase tracking-[0.2em] text-white/90 bg-black/30 backdrop-blur px-2.5 py-1 rounded-full">
+          {String(index + 1).padStart(2, "0")}
+        </div>
+        <div className="absolute bottom-4 left-5 right-5">
+          <div className="text-xs uppercase tracking-widest text-gold/95 font-semibold">
+            {category.nameEn}
+          </div>
+          <h3 className="mt-1 text-2xl font-display font-bold text-white leading-tight">
+            {category.nameVn}
+          </h3>
+        </div>
       </div>
 
-      {/* Content Container */}
-      <div
-        className={`relative z-10 flex flex-col h-full transition-all duration-700 ${isExpanded ? "p-8" : "p-8 justify-end"}`}
-      >
-        {/* Top Section - Always Visible */}
-        <div className="space-y-4">
-          {/* Category Label */}
-          <div className="inline-flex w-fit">
-            <span className="text-xs font-semibold uppercase tracking-widest text-white/80 drop-shadow-lg">
-              {product.nameEn}
-            </span>
-          </div>
+      {/* Body */}
+      <div className="flex flex-col flex-1 p-6">
+        <p className="text-sm text-ink-soft leading-relaxed line-clamp-2">
+          {category.description}
+        </p>
 
-          {/* Main Title & Description */}
-          <div className="space-y-3">
-            <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight drop-shadow-lg">
-              {product.nameVn}
-            </h3>
-            <p className="text-base md:text-lg text-white/90 leading-relaxed max-w-md drop-shadow-md">
-              {product.description}
-            </p>
-          </div>
-        </div>
-
-        {/* Expandable Section */}
-        {isExpanded && (
-          <div className="mt-8 space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-300">
-            {/* Subcategories */}
-            <div className="space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-widest text-white/70 drop-shadow-md">
-                Hạng mục
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {product.subcategories.map((sub, idx) => (
-                  <span
-                    key={idx}
-                    className="px-3 py-1.5 text-sm rounded-full bg-white/15 text-white border border-white/30 backdrop-blur-sm hover:bg-white/25 transition-all duration-300 drop-shadow-md"
-                  >
-                    {sub.name}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Applications */}
-            <div className="space-y-3 border-t border-white/20 pt-6">
-              <p className="text-xs font-semibold uppercase tracking-widest text-white/70 drop-shadow-md">
-                Ứng dụng
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {product.applications.map((app, idx) => (
-                  <span
-                    key={idx}
-                    className="text-sm text-white/90 flex items-center gap-2 drop-shadow-md"
-                  >
-                    <span className="h-2 w-2 rounded-full bg-white/70" />
-                    {app}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* CTA Button - Bottom */}
-        <div className={`transition-all duration-700 ${isExpanded ? "mt-8" : "mt-auto"}`}>
+        {/* Sub-categories pills */}
+        <div className="mt-5">
           <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="w-full inline-flex items-center justify-between px-4 py-3 rounded-lg bg-white/15 hover:bg-white/25 text-white font-semibold text-sm backdrop-blur-md border border-white/30 transition-all duration-300 group/btn drop-shadow-lg"
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-controls={`sub-${category.id}`}
+            className="w-full flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-deep hover:text-gold transition-colors"
           >
-            <span>{isExpanded ? "Thu gọn" : "Khám phá"}</span>
+            <span>Danh mục · {category.subcategories.length}</span>
             <ChevronDown
-              className={`h-4 w-4 transition-transform duration-300 ${
-                isExpanded ? "rotate-180" : ""
-              }`}
+              className={`w-4 h-4 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
             />
           </button>
+          <div
+            id={`sub-${category.id}`}
+            className={`grid transition-[grid-template-rows] duration-500 ease-out ${
+              open ? "grid-rows-[1fr] mt-3" : "grid-rows-[0fr]"
+            }`}
+          >
+            <div className="overflow-hidden">
+              <ul className="flex flex-col gap-1.5">
+                {category.subcategories.map((s, i) => (
+                  <li
+                    key={s.name}
+                    className="flex items-center gap-2.5 rounded-lg bg-secondary/60 px-3 py-2 text-sm text-ink hover:bg-gold/10 hover:text-deep transition-colors"
+                    style={{
+                      animation: open
+                        ? `fade-in 0.4s ease-out ${i * 50}ms both`
+                        : "none",
+                    }}
+                  >
+                    <span className="inline-flex items-center justify-center w-7 h-7 rounded-md bg-white text-gold shadow-sm">
+                      <Ico name={s.icon || "Circle"} className="w-3.5 h-3.5" />
+                    </span>
+                    <span className="font-medium">{s.name}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          {/* Horizontal scroll pills (always visible preview) */}
+          {!open && (
+            <div className="mt-3 flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              {category.subcategories.slice(0, 4).map((s) => (
+                <span
+                  key={s.name}
+                  className="shrink-0 inline-flex items-center gap-1.5 rounded-full bg-secondary px-3 py-1.5 text-xs font-medium text-deep border border-transparent hover:border-gold/40 hover:bg-gold/5 transition"
+                >
+                  <Ico name={s.icon || "Circle"} className="w-3 h-3 text-gold" />
+                  {s.name}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
+
+        {/* Applications */}
+        <div className="mt-5 pt-5 border-t border-dashed border-deep/10">
+          <div className="text-[10px] uppercase tracking-[0.2em] text-ink-soft font-semibold">
+            Ứng dụng
+          </div>
+          <div className="mt-2 flex flex-wrap gap-1.5">
+            {category.applications.map((a) => (
+              <span
+                key={a}
+                className="text-xs text-ink-soft before:content-['•'] before:text-gold before:mr-1.5 first:before:content-none"
+              >
+                {a}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA */}
+        <a
+          href="#contact"
+          className="mt-6 inline-flex items-center justify-between gap-2 rounded-md bg-deep text-deep-foreground px-4 py-3 text-sm font-semibold hover:bg-gold hover:text-gold-foreground transition-colors group/btn"
+          aria-label={`Tìm hiểu thêm về ${category.nameVn}`}
+        >
+          <span>Tìm hiểu thêm</span>
+          <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+        </a>
       </div>
 
-      {/* Hover Accent Line */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-white/0 via-white/50 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-      {/* Min Height */}
-      <style>{`
-        .group { min-height: 420px; }
-        @media (min-width: 768px) {
-          .group { min-height: 500px; }
-        }
-      `}</style>
-    </div>
+      {/* Glow on hover */}
+      <div className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-gold/0 via-gold/0 to-gold/20 blur-2xl -z-10" />
+    </article>
   );
 }

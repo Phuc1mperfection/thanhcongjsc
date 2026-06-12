@@ -5,7 +5,7 @@
       "nameEn": "Bridge Bearings",
       "nameVn": "Gối cầu",
       "image": "bearing",
-      "icon": "shield",
+      "icon": "AlignVerticalSpaceAround",
       "accent": "from-amber-600/80 to-amber-400/30",
       "shortDescription": "Gối cầu là thiết bị kết cấu quan trọng trong công trình cầu đường, có nhiệm vụ truyền tải trọng từ kết cấu nhịp xuống mố, trụ cầu, đồng thời cho phép các chuyển vị tịnh tiến và xoay phát sinh trong quá trình khai thác, qua đó đảm bảo khả năng làm việc ổn định, an toàn và bền vững của công trình.",
       "description": "Gối cầu chịu lực truyền tải trọng từ kết cấu nhịp xuống mố trụ, hấp thụ dịch chuyển và chuyển vị. Thiết kế theo tiêu chuẩn quốc tế, tuổi thọ cao.",
@@ -13,6 +13,7 @@
       "subcategories": [
         {
           "name": "Gối chậu (Pot Bearing)",
+          "icon": "AlignVerticalSpaceAround",
           "description": "Loại gối cầu chịu tải trọng lớn, sử dụng cao su đàn hồi bị giam kín trong chậu thép để truyền tải trọng thẳng đứng từ kết cấu nhịp xuống trụ, mố cầu.",
           "features": [
             "Khả năng chịu tải lớn, phù hợp cho cầu trung và cầu lớn",
@@ -49,6 +50,7 @@
         },
         {
           "name": "Gối chỏm cầu (Spherical Bearing)",
+          "icon": "CircleDot",
           "description": "Loại gối cầu chịu tải trọng rất lớn, sử dụng bề mặt chỏm cầu bằng thép kết hợp với vật liệu trượt ma sát thấp (PTFE/Inox) để truyền tải trọng từ kết cấu nhịp xuống trụ, mố cầu, đồng thời cho phép chuyển vị quay đa hướng và chuyển vị ngang theo yêu cầu thiết kế.",
           "features": [
             "Khả năng chịu tải rất lớn, phù hợp cho cầu nhịp dài và cầu tải trọng nặng",
@@ -80,6 +82,7 @@
         },
         {
           "name": "Gối cao su đàn hồi (Elastomeric Rubber Bearing)",
+          "icon": "Layers",
           "description": "Loại gối cầu sử dụng cao su tự nhiên hoặc cao su tổng hợp kết hợp với bản thép gia cường, có khả năng truyền tải trọng đứng, đồng thời cho phép quay và chuyển vị ngang nhờ đặc tính đàn hồi của vật liệu cao su.",
           "features": [
             "Đàn hồi cao, cho phép quay và chuyển vị tự nhiên của kết cấu",
@@ -108,6 +111,7 @@
         },
         {
           "name": "Gối đĩa (Disc Bearing)",
+          "icon": "Circle",
           "description": "Loại gối cầu sử dụng đĩa đàn hồi polymer (thường là polyurethane) làm bộ phận chịu nén chính. Dưới tải trọng đứng lớn, đĩa đàn hồi bị nén nhưng không giãn nở theo phương ngang, cho phép quay tự do giữa kết cấu nhịp và mố/trụ cầu.",
           "features": [
             "Chịu tải trọng rất lớn, phù hợp cầu nhịp trung và lớn",
@@ -148,7 +152,7 @@
       "nameEn": "Expansion Joints",
       "nameVn": "Khe co giãn",
       "image": "expansion",
-      "icon": "layers",
+      "icon": "PanelTopBottomDashed",
       "accent": "from-blue-600/90 to-blue-400/40",
       "shortDescription": "Khe co giãn là bộ phận kỹ thuật được bố trí tại các vị trí gián đoạn của kết cấu công trình (như cầu, đường, nhà, tường chắn…) nhằm cho phép các cấu kiện giãn nở hoặc co lại do ảnh hưởng của nhiệt độ, tải trọng, co ngót vật liệu hoặc chuyển vị, đồng thời đảm bảo an toàn kết cấu, tính liên tục khai thác và độ bền lâu dài của công trình.",
       "description": "Hệ thống khe co giãn cho cầu và công trình giao thông, đáp ứng dịch chuyển nhiệt và tải trọng động. Đa dạng dải dịch chuyển, độ bền cao và bảo trì thuận tiện.",
@@ -156,6 +160,7 @@
       "subcategories": [
         {
           "name": "Khe co giãn dạng cao su (Rubber Expansion Joints)",
+          "icon": "ArrowLeftRight",
           "description": "Sử dụng dải cao su đàn hồi, chống thấm nước và có khả năng biến dạng tốt.",
           "features": [
             "Độ đàn hồi cao, cho phép chuyển vị theo phương ngang và phương đứng",
@@ -186,6 +191,7 @@
         },
         {
           "name": "Khe co giãn dạng ray (Rail-Type Expansion Joints)",
+          "icon": "Minus",
           "description": "Sử dụng hệ ray thép kết hợp với cao su đàn hồi, được thiết kế để đáp ứng chuyển vị lớn do giãn nở nhiệt, co ngót, tải trọng xe và biến dạng kết cấu.",
           "features": [
             "Khả năng chịu tải lớn, phù hợp giao thông nặng và lưu lượng cao",
@@ -217,6 +223,7 @@
         },
         {
           "name": "Khe co giãn răng lược (Finger Expansion Joints)",
+          "icon": "Zap",
           "description": "Sử dụng các bản thép dạng răng lược ăn khớp với nhau, cho phép mặt cầu giãn nở và co ngót với chuyển vị rất lớn do nhiệt độ, tải trọng xe và biến dạng kết cấu.",
           "features": [
             "Cho phép chuyển vị rất lớn (có thể lên đến hàng trăm mm)",
@@ -248,6 +255,7 @@
         },
         {
           "name": "Khe co giãn dạng mô đun (Modular-Type Expansion Joints)",
+          "icon": "Grid3x3",
           "description": "Được cấu tạo từ nhiều dầm ray thép song song (module) kết hợp với cao su đàn hồi và hệ thống liên kết trung gian, cho phép đáp ứng chuyển vị rất lớn do giãn nở nhiệt, co ngót, tải trọng xe và biến dạng kết cấu.",
           "features": [
             "Khả năng chuyển vị rất lớn, có thể thiết kế theo yêu cầu từng dự án",
@@ -290,7 +298,7 @@
       "nameEn": "Noise Barriers",
       "nameVn": "Tường chống ồn",
       "image": "noise",
-      "icon": "volume",
+      "icon": "VolumeX",
       "accent": "from-orange-600/70 to-orange-400/20",
       "shortDescription": "Tường chống ồn là công trình hoặc hạng mục kỹ thuật được lắp đặt dọc theo các tuyến giao thông, khu công nghiệp hoặc khu dân cư nhằm giảm thiểu tiếng ồn truyền từ nguồn phát đến khu vực cần bảo vệ, góp phần cải thiện môi trường sống, đảm bảo sức khỏe và tuân thủ các tiêu chuẩn về tiếng ồn. Tường chống ồn có thể hoạt động theo cơ chế phản âm, tiêu âm hoặc kết hợp cả hai, tùy theo vật liệu và cấu tạo.",
       "description": "Hệ thống tường chống ồn cho cao tốc và đường đô thị, giảm tiếng ồn giao thông hiệu quả. Vật liệu đa dạng, thẩm mỹ và bền vững. Có thể hoạt động theo cơ chế phản âm, tiêu âm hoặc kết hợp cả hai.",
@@ -298,6 +306,7 @@
       "subcategories": [
         {
           "name": "Tường tiêu âm (Sound Absorbing Noise Barriers)",
+          "icon": "VolumeX",
           "description": "Giảm tiếng ồn bằng cách hấp thụ năng lượng âm thanh, hạn chế phản xạ.",
           "features": [
             "Hấp thụ âm thanh hiệu quả",
@@ -318,6 +327,7 @@
         },
         {
           "name": "Tường phản âm (Sound Reflective Noise Barriers)",
+          "icon": "VolumeX",
           "description": "Phản xạ sóng âm ra xa khu vực cần bảo vệ.",
           "features": [
             "Phản xạ âm thanh hiệu quả",
@@ -349,7 +359,7 @@
       "nameEn": "Geotechnical Solutions",
       "nameVn": "Giải pháp địa kỹ thuật",
       "image": "geo",
-      "icon": "mountain",
+      "icon": "MountainSnow",
       "accent": "from-slate-700/80 to-slate-500/30",
       "shortDescription": "Các giải pháp địa kỹ thuật được áp dụng nhằm ổn định nền đất, mái dốc và công trình hạ tầng, đảm bảo an toàn, bền vững và hiệu quả kinh tế trong thi công và khai thác lâu dài.",
       "description": "Giải pháp tổng thể cho gia cố nền đất yếu, ổn định mái dốc và thoát nước công trình. Vật liệu đạt chuẩn ASTM và TCVN.",
@@ -357,6 +367,7 @@
       "subcategories": [
         {
           "name": "Lưới chống xói (Erosion Control Systems)",
+          "icon": "Grid3x3",
           "description": "Giải pháp địa kỹ thuật được sử dụng để chống xói mòn, rửa trôi đất do mưa, dòng chảy mặt, sóng hoặc thủy triều; đồng thời ổn định bề mặt mái dốc, taluy, bờ kè và nền đất yếu.",
           "features": [
             "Chống xói mòn và ổn định bề mặt hiệu quả",
@@ -388,6 +399,7 @@
         },
         {
           "name": "Lưới thép chống đá lăn, đá rơi (Rockfall Protection Systems)",
+          "icon": "Shield",
           "description": "Giải pháp địa kỹ thuật được sử dụng để ngăn chặn, kiểm soát và giảm thiểu nguy cơ đá lăn, đá rơi từ các sườn núi, mái dốc hoặc taluy cao.",
           "features": [
             "Khả năng chịu lực và hấp thụ năng lượng cao",
@@ -419,6 +431,7 @@
         },
         {
           "name": "Lưới địa gia cường cốt sợi thủy tinh (Fiberglass Geogrids)",
+          "icon": "Layers",
           "description": "Vật liệu địa kỹ thuật được sản xuất từ sợi thủy tinh cường độ cao, phủ lớp polymer bảo vệ, có chức năng gia cường kết cấu đất và lớp mặt đường.",
           "features": [
             "Cường độ chịu kéo cao, ổn định theo cả hai phương",
@@ -449,6 +462,7 @@
         },
         {
           "name": "Tường chắn có cốt (Reinforced Retaining Walls)",
+          "icon": "Mountain",
           "description": "Kết cấu địa kỹ thuật sử dụng vật liệu gia cường (lưới địa, dải cốt, thép hoặc sợi tổng hợp) kết hợp với khối đất đắp phía sau để tạo thành hệ kết cấu ổn định.",
           "features": [
             "Khả năng chịu lực và ổn định cao, phù hợp công trình lớn",
@@ -494,6 +508,7 @@
         },
         {
           "name": "Gia cố mái taluy (Slope Reinforcement)",
+          "icon": "TrendingUp",
           "description": "Giải pháp kỹ thuật nhằm ổn định mái dốc, mái đào và mái đắp, hạn chế sạt lở, xói mòn đất đá, đảm bảo an toàn và tuổi thọ cho các công trình giao thông, hạ tầng và xây dựng.",
           "features": [
             "Tăng khả năng ổn định mái dốc, chống sạt trượt hiệu quả",

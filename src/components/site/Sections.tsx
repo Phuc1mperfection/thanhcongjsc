@@ -1,10 +1,25 @@
-import { ArrowRight, Download, ShieldCheck, Layers, Wrench, ChevronRight, Building2, Construction, Mountain, Volume2, HardHat, Activity, Ruler, BadgeCheck, Mail, MessageSquare, FileText, Globe, Phone, MapPin } from "lucide-react";
-import heroBridge from "@/assets/hero-bridge.jpg";
-import imgExpansion from "@/assets/product-expansion.jpg";
-import imgBearing from "@/assets/product-bearing.jpg";
-import imgGeo from "@/assets/product-geo.jpg";
-import imgNoise from "@/assets/product-noise.jpg";
-import imgMaintenance from "@/assets/product-maintenance.jpg";
+import {
+  ArrowRight,
+  Download,
+  ShieldCheck,
+  Layers,
+  Wrench,
+  ChevronRight,
+  Building2,
+  Construction,
+  Mountain,
+  Volume2,
+  HardHat,
+  Activity,
+  Ruler,
+  BadgeCheck,
+  Mail,
+  MessageSquare,
+  FileText,
+  Globe,
+  Phone,
+  MapPin,
+} from "lucide-react";
 
 export function Hero() {
   return (
@@ -18,11 +33,12 @@ export function Hero() {
             Engineering · Infrastructure · Vietnam
           </div>
           <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-bold text-deep leading-[1.05] tracking-tight">
-            Giải pháp kỹ thuật <span className="text-gold">hạ tầng giao thông</span> cho công trình bền vững
+            Giải pháp kỹ thuật <span className="text-gold">hạ tầng giao thông</span> cho công trình
+            bền vững
           </h1>
           <p className="mt-6 text-lg text-ink-soft max-w-2xl leading-relaxed">
-            Thanh Cong JSC cung cấp sản phẩm, vật tư và giải pháp kỹ thuật cho cầu đường,
-            hạ tầng giao thông, địa kỹ thuật và công trình đô thị.
+            Thanh Cong JSC cung cấp sản phẩm, vật tư và giải pháp kỹ thuật cho cầu đường, hạ tầng
+            giao thông, địa kỹ thuật và công trình đô thị.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
@@ -59,7 +75,7 @@ export function Hero() {
             <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-deep/5 rounded-2xl -z-10" />
             <div className="relative overflow-hidden rounded-2xl shadow-(--shadow-card-hover) ring-1 ring-deep/10">
               <img
-                src={heroBridge}
+                src="/images/hero-bridge.jpg"
                 alt="Cầu dây văng hiện đại - hạ tầng giao thông Việt Nam"
                 width={1536}
                 height={1152}
@@ -83,26 +99,43 @@ export function Hero() {
 
 export function About() {
   const cards = [
-    { icon: Layers, title: "Giải pháp kỹ thuật phù hợp từng dự án", desc: "Tư vấn lựa chọn sản phẩm và cấu hình kỹ thuật theo yêu cầu thực tế của từng công trình." },
-    { icon: ShieldCheck, title: "Sản phẩm phục vụ công trình hạ tầng trọng điểm", desc: "Đáp ứng yêu cầu kỹ thuật cho cầu đường, cao tốc, cầu vượt đô thị và hạ tầng giao thông." },
-    { icon: Wrench, title: "Đồng hành trong cung cấp, bảo trì và thay thế vật tư", desc: "Hỗ trợ dài hạn về cung cấp, kiểm tra, bảo trì và thay thế hạng mục trong khai thác." },
+    {
+      icon: Layers,
+      title: "Giải pháp kỹ thuật phù hợp từng dự án",
+      desc: "Tư vấn lựa chọn sản phẩm và cấu hình kỹ thuật theo yêu cầu thực tế của từng công trình.",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Sản phẩm phục vụ công trình hạ tầng trọng điểm",
+      desc: "Đáp ứng yêu cầu kỹ thuật cho cầu đường, cao tốc, cầu vượt đô thị và hạ tầng giao thông.",
+    },
+    {
+      icon: Wrench,
+      title: "Đồng hành trong cung cấp, bảo trì và thay thế vật tư",
+      desc: "Hỗ trợ dài hạn về cung cấp, kiểm tra, bảo trì và thay thế hạng mục trong khai thác.",
+    },
   ];
   return (
     <section id="about" className="section-pad bg-white">
       <div className="container-tc">
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
-            <div className="eyebrow"><span className="h-[2px] w-7 bg-gold" /> Về chúng tôi</div>
+            <div className="eyebrow">
+              <span className="h-[2px] w-7 bg-gold" /> Về chúng tôi
+            </div>
             <h2 className="mt-4 text-3xl md:text-4xl font-bold text-deep tracking-tight">
               Về Thanh Cong JSC
             </h2>
             <p className="mt-6 text-ink-soft leading-relaxed">
-              Thanh Cong JSC là đơn vị cung cấp sản phẩm, vật tư và giải pháp kỹ thuật phục vụ
-              các công trình cầu đường, hạ tầng giao thông và công trình đô thị. Chúng tôi tập
-              trung vào chất lượng sản phẩm, hiệu quả kỹ thuật, độ bền công trình và sự đồng hành
-              lâu dài cùng khách hàng.
+              Thanh Cong JSC là đơn vị cung cấp sản phẩm, vật tư và giải pháp kỹ thuật phục vụ các
+              công trình cầu đường, hạ tầng giao thông và công trình đô thị. Chúng tôi tập trung vào
+              chất lượng sản phẩm, hiệu quả kỹ thuật, độ bền công trình và sự đồng hành lâu dài cùng
+              khách hàng.
             </p>
-            <a href="#products" className="mt-6 inline-flex items-center gap-2 text-deep font-semibold hover:text-gold transition">
+            <a
+              href="#products"
+              className="mt-6 inline-flex items-center gap-2 text-deep font-semibold hover:text-gold transition"
+            >
               Khám phá sản phẩm & giải pháp <ArrowRight size={16} />
             </a>
           </div>
@@ -141,28 +174,12 @@ type Product = {
 };
 
 const PRODUCTS: Product[] = [
-  {
-    id: "khe-co-gian",
-    title: "Khe co giãn",
-    english: "Expansion Joints",
-    image: imgExpansion,
-    description:
-      "Khe co giãn là hạng mục kỹ thuật tại các vị trí giãn đoạn, giúp hấp thụ chuyển vị do nhiệt độ, tải trọng và dao động. Giải pháp này bảo vệ kết cấu, hạn chế hư hỏng và đảm bảo công trình vận hành êm thuận.",
-    keywords: ["Rubber", "Rail-Type", "Finger", "Modular"],
-    applications: ["Cầu đường bộ", "Cao tốc", "Cầu vượt đô thị"],
-    items: [
-      "Khe co giãn dạng cao su / Rubber Expansion Joints",
-      "Khe co giãn dạng ray / Rail-Type Expansion Joints",
-      "Khe co giãn răng lược / Finger Expansion Joints",
-      "Khe co giãn dạng module / Modular-Type Expansion Joints",
-    ],
-    cta: "Xem chi tiết",
-  },
+
   {
     id: "goi-cau",
     title: "Gối cầu",
     english: "Bridge Bearings",
-    image: imgBearing,
+    image: "/images/product-bearing.jpg",
     description:
       "Gối cầu là bộ phận quan trọng truyền tải trọng từ kết cấu nhịp xuống mố, trụ và cho phép các chuyển vị trong quá trình khai thác. Sử dụng gối cầu chất lượng cao giúp đảm bảo an toàn, ổn định và tăng tuổi thọ công trình.",
     keywords: ["Pot", "Spherical", "Elastomeric", "Disc"],
@@ -176,10 +193,43 @@ const PRODUCTS: Product[] = [
     cta: "Xem chi tiết",
   },
   {
+    id: "khe-co-gian",
+    title: "Khe co giãn",
+    english: "Expansion Joints",
+    image: "/images/product-expansion.jpg",
+    description:
+      "Khe co giãn là hạng mục kỹ thuật tại các vị trí giãn đoạn, giúp hấp thụ chuyển vị do nhiệt độ, tải trọng và dao động. Giải pháp này bảo vệ kết cấu, hạn chế hư hỏng và đảm bảo công trình vận hành êm thuận.",
+    keywords: ["Rubber", "Rail-Type", "Finger", "Modular"],
+    applications: ["Cầu đường bộ", "Cao tốc", "Cầu vượt đô thị"],
+    items: [
+      "Khe co giãn dạng cao su / Rubber Expansion Joints",
+      "Khe co giãn dạng ray / Rail-Type Expansion Joints",
+      "Khe co giãn răng lược / Finger Expansion Joints",
+      "Khe co giãn dạng module / Modular-Type Expansion Joints",
+    ],
+    cta: "Xem chi tiết",
+  },
+  {
+    id: "tuong-chong-on",
+    title: "Tường chống ồn",
+    english: "Noise Barriers",
+    image: "/images/product-noise.jpg",
+    description:
+      "Tường chống ồn được lắp đặt dọc các tuyến giao thông, khu đô thị và khu công nghiệp nhằm giảm tiếng ồn từ phương tiện và hoạt động công nghiệp. Giải pháp này giúp cải thiện môi trường sống và nâng cao chất lượng không gian đô thị.",
+    keywords: ["Tiêu âm", "Phản âm", "Kết hợp"],
+    applications: ["Cao tốc đô thị", "Khu dân cư", "Khu công nghiệp"],
+    items: [
+      "Tường chống ồn tiêu âm",
+      "Tường chống ồn phản âm",
+      "Giải pháp kết hợp tiêu âm và phản âm",
+    ],
+    cta: "Xem chi tiết",
+  },
+  {
     id: "dia-ky-thuat",
     title: "Giải pháp địa kỹ thuật",
     english: "Geotechnical Solutions",
-    image: imgGeo,
+    image: "/images/product-geo.jpg",
     description:
       "Các giải pháp địa kỹ thuật được áp dụng để gia cố nền đất, ổn định mái dốc và tăng khả năng chịu tải. Nhờ đó, công trình đảm bảo an toàn và nâng cao độ bền vững trong thi công và khai thác.",
     keywords: ["Rockfall", "Erosion", "Geogrid", "Retaining Wall"],
@@ -193,27 +243,12 @@ const PRODUCTS: Product[] = [
     ],
     cta: "Liên hệ tư vấn",
   },
-  {
-    id: "tuong-chong-on",
-    title: "Tường chống ồn",
-    english: "Noise Barriers",
-    image: imgNoise,
-    description:
-      "Tường chống ồn được lắp đặt dọc các tuyến giao thông, khu đô thị và khu công nghiệp nhằm giảm tiếng ồn từ phương tiện và hoạt động công nghiệp. Giải pháp này giúp cải thiện môi trường sống và nâng cao chất lượng không gian đô thị.",
-    keywords: ["Tiêu âm", "Phản âm", "Kết hợp"],
-    applications: ["Cao tốc đô thị", "Khu dân cư", "Khu công nghiệp"],
-    items: [
-      "Tường chống ồn tiêu âm",
-      "Tường chống ồn phản âm",
-      "Giải pháp kết hợp tiêu âm và phản âm",
-    ],
-    cta: "Xem chi tiết",
-  },
+  
   {
     id: "bao-duong",
     title: "Bảo dưỡng & Cung cấp vật tư",
     english: "Maintenance & Supply",
-    image: imgMaintenance,
+    image: "/images/product-maintenance.jpg",
     description:
       "Thanh Cong JSC cung cấp dịch vụ bảo trì, thay thế hạng mục giao thông, vật tư và giải pháp kỹ thuật, góp phần nâng cao độ bền và hiệu quả khai thác công trình.",
     keywords: ["Bảo trì", "Thay thế", "Phụ kiện", "Tư vấn"],
@@ -234,13 +269,15 @@ export function Products() {
       <div className="container-tc">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
-            <div className="eyebrow"><span className="h-[2px] w-7 bg-gold" /> Danh mục</div>
+            <div className="eyebrow">
+              <span className="h-[2px] w-7 bg-gold" /> Danh mục
+            </div>
             <h2 className="mt-4 text-3xl md:text-4xl font-bold text-deep tracking-tight max-w-2xl">
               Sản phẩm & Giải pháp
             </h2>
             <p className="mt-4 text-ink-soft max-w-2xl">
-              Năm nhóm sản phẩm và giải pháp kỹ thuật trọng tâm, đáp ứng yêu cầu thiết kế và khai thác
-              của công trình hạ tầng giao thông.
+              Năm nhóm sản phẩm và giải pháp kỹ thuật trọng tâm, đáp ứng yêu cầu thiết kế và khai
+              thác của công trình hạ tầng giao thông.
             </p>
           </div>
         </div>
@@ -254,7 +291,9 @@ export function Products() {
                 idx === PRODUCTS.length - 1 && PRODUCTS.length % 2 === 1 ? "md:col-span-2" : ""
               }`}
             >
-              <div className={`grid ${idx === PRODUCTS.length - 1 && PRODUCTS.length % 2 === 1 ? "md:grid-cols-2" : ""}`}>
+              <div
+                className={`grid ${idx === PRODUCTS.length - 1 && PRODUCTS.length % 2 === 1 ? "md:grid-cols-2" : ""}`}
+              >
                 <div className="relative h-56 md:h-64 overflow-hidden">
                   <img
                     src={p.image}
@@ -343,7 +382,8 @@ export function Applications() {
             Ứng dụng trong công trình
           </h2>
           <p className="mt-4 text-ink-soft">
-            Giải pháp kỹ thuật của Thanh Cong JSC phục vụ nhiều loại hình công trình hạ tầng và đô thị.
+            Giải pháp kỹ thuật của Thanh Cong JSC phục vụ nhiều loại hình công trình hạ tầng và đô
+            thị.
           </p>
         </div>
         <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -390,11 +430,18 @@ export function Capability() {
     },
   ];
   return (
-    <section id="capability" className="section-pad relative bg-deep text-deep-foreground overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.07]" style={{
-        backgroundImage: "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
-        backgroundSize: "56px 56px",
-      }} />
+    <section
+      id="capability"
+      className="section-pad relative bg-deep text-deep-foreground overflow-hidden"
+    >
+      <div
+        className="absolute inset-0 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
+          backgroundSize: "56px 56px",
+        }}
+      />
       <div className="absolute top-0 right-0 w-[30rem] h-[30rem] bg-gold/10 rounded-full blur-3xl" />
       <div className="container-tc relative">
         <div className="max-w-2xl">
@@ -459,8 +506,9 @@ export function Catalogue() {
               </a>
             </div>
             <div className="mt-8 flex items-center gap-6 text-xs text-ink-soft">
-              <div className="flex items-center gap-2"><FileText size={14} className="text-gold" /> Định dạng PDF</div>
-              <div className="flex items-center gap-2"><BadgeCheck size={14} className="text-gold" /> Cập nhật mới nhất</div>
+              <div className="flex items-center gap-2">
+                <FileText size={14} className="text-gold" /> Định dạng PDF
+              </div>
             </div>
           </div>
           <div className="lg:col-span-5">
@@ -469,24 +517,26 @@ export function Catalogue() {
               <div className="absolute -inset-3 bg-deep/5 rounded-2xl -rotate-3" />
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-[var(--shadow-card-hover)] ring-1 ring-deep/10 bg-deep">
                 <img
-                  src={imgExpansion}
+                  src="src/assets/catalogue-cover.jpg"
                   alt="Catalogue Thanh Cong JSC"
                   loading="lazy"
-                  width={600}
-                  height={800}
                   className="absolute inset-0 w-full h-full object-cover opacity-70"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-deep/40 via-deep/60 to-deep/95" />
+                <div className="absolute inset-0 bg-linear-to-b from-deep/40 via-deep/60 to-deep/95" />
                 <div className="absolute inset-0 p-8 flex flex-col justify-between text-white">
                   <div>
-                    <div className="text-[10px] uppercase tracking-[0.25em] text-gold">Catalogue 2025</div>
+                    <div className="text-[10px] uppercase tracking-[0.25em] text-gold">
+                      Catalogue 2025
+                    </div>
                     <div className="mt-3 font-display font-bold text-2xl leading-tight">
                       Sản phẩm & Giải pháp kỹ thuật hạ tầng giao thông
                     </div>
                   </div>
                   <div>
                     <div className="h-[2px] w-12 bg-gold mb-3" />
-                    <div className="font-display font-bold">THANH CONG <span className="text-gold">JSC</span></div>
+                    <div className="font-display font-bold">
+                      THANH CONG <span className="text-gold">JSC</span>
+                    </div>
                     <div className="text-xs text-white/70 mt-1">thanhcongjsc.com</div>
                   </div>
                 </div>
@@ -504,7 +554,9 @@ export function Contact() {
     <section id="contact" className="section-pad bg-secondary/40">
       <div className="container-tc grid lg:grid-cols-12 gap-10">
         <div className="lg:col-span-5">
-          <div className="eyebrow"><span className="h-[2px] w-7 bg-gold" /> Liên hệ</div>
+          <div className="eyebrow">
+            <span className="h-[2px] w-7 bg-gold" /> Liên hệ
+          </div>
           <h2 className="mt-4 text-3xl md:text-4xl font-bold text-deep tracking-tight">
             Liên hệ tư vấn dự án
           </h2>
@@ -515,7 +567,12 @@ export function Contact() {
           <ul className="mt-8 space-y-4">
             {[
               { Icon: Globe, label: "Website", value: "thanhcongjsc.com" },
-              { Icon: Mail, label: "Email", value: "info@thanhcongjsc.com", href: "mailto:info@thanhcongjsc.com" },
+              {
+                Icon: Mail,
+                label: "Email",
+                value: "info@thanhcongjsc.com",
+                href: "mailto:info@thanhcongjsc.com",
+              },
               { Icon: Phone, label: "Điện thoại", value: "[Cập nhật số điện thoại]" },
               { Icon: MapPin, label: "Địa chỉ", value: "[Cập nhật địa chỉ công ty]" },
             ].map(({ Icon, label, value, href }) => (
@@ -526,7 +583,9 @@ export function Contact() {
                 <div>
                   <div className="text-xs uppercase tracking-wider text-ink-soft">{label}</div>
                   {href ? (
-                    <a href={href} className="font-semibold text-deep hover:text-gold">{value}</a>
+                    <a href={href} className="font-semibold text-deep hover:text-gold">
+                      {value}
+                    </a>
                   ) : (
                     <div className="font-semibold text-deep">{value}</div>
                   )}
@@ -538,11 +597,16 @@ export function Contact() {
 
         <div className="lg:col-span-7">
           <form
-            onSubmit={(e) => { e.preventDefault(); window.location.href = "mailto:info@thanhcongjsc.com"; }}
+            onSubmit={(e) => {
+              e.preventDefault();
+              window.location.href = "mailto:info@thanhcongjsc.com";
+            }}
             className="rounded-2xl bg-card border border-border p-6 md:p-8 shadow-[var(--shadow-card)]"
           >
             <h3 className="font-display font-semibold text-deep text-xl">Gửi yêu cầu tư vấn</h3>
-            <p className="mt-1 text-sm text-ink-soft">Vui lòng cung cấp thông tin để chúng tôi liên hệ lại.</p>
+            <p className="mt-1 text-sm text-ink-soft">
+              Vui lòng cung cấp thông tin để chúng tôi liên hệ lại.
+            </p>
             <div className="mt-6 grid sm:grid-cols-2 gap-4">
               <Field label="Họ và tên" name="name" required />
               <Field label="Công ty / Đơn vị" name="company" />
@@ -550,7 +614,11 @@ export function Contact() {
               <Field label="Số điện thoại" name="phone" />
             </div>
             <div className="mt-4">
-              <Field label="Sản phẩm / Giải pháp quan tâm" name="topic" placeholder="VD: Khe co giãn, gối cầu..." />
+              <Field
+                label="Sản phẩm / Giải pháp quan tâm"
+                name="topic"
+                placeholder="VD: Khe co giãn, gối cầu..."
+              />
             </div>
             <div className="mt-4">
               <label className="block text-xs font-semibold text-deep uppercase tracking-wider mb-1.5">
@@ -585,12 +653,23 @@ export function Contact() {
 }
 
 function Field({
-  label, name, type = "text", required, placeholder,
-}: { label: string; name: string; type?: string; required?: boolean; placeholder?: string }) {
+  label,
+  name,
+  type = "text",
+  required,
+  placeholder,
+}: {
+  label: string;
+  name: string;
+  type?: string;
+  required?: boolean;
+  placeholder?: string;
+}) {
   return (
     <div>
       <label className="block text-xs font-semibold text-deep uppercase tracking-wider mb-1.5">
-        {label}{required && <span className="text-gold"> *</span>}
+        {label}
+        {required && <span className="text-gold"> *</span>}
       </label>
       <input
         type={type}
