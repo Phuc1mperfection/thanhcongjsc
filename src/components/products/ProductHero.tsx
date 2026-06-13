@@ -50,7 +50,7 @@ export function ProductHero({
             </p>
           </div>
           <div className="hidden lg:flex shrink-0 items-center justify-center w-28 h-28 rounded-3xl bg-white shadow-[var(--shadow-card)] border border-deep/10">
-            <Ico name={subcategory.icon} className="w-12 h-12 text-gold" />
+            <Ico name={subcategory.icon || "Circle"} className="w-12 h-12 text-gold" />
           </div>
         </div>
       </div>

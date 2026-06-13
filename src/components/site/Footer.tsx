@@ -83,11 +83,11 @@ export function Footer() {
             </li>
             <li className="flex gap-3">
               <Phone size={16} className="text-gold mt-0.5 shrink-0" />
-              <span>[Cập nhật số điện thoại]</span>
+              <span> 039 312 0936</span>
             </li>
             <li className="flex gap-3">
               <MapPin size={16} className="text-gold mt-0.5 shrink-0" />
-              <span>[Cập nhật địa chỉ công ty]</span>
+              <span>Số 17 Ngõ 189/82 đường Nguyễn Ngọc Vũ, phường Yên Hòa, Hà Nội, Việt Nam</span>
             </li>
           </ul>
         </div>
@@ -95,7 +95,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-tc py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/60">
-          <div>© {new Date().getFullYear()} Thanh Cong JSC. Tất cả quyền được bảo lưu.</div>
+          <div>© {new Date().getFullYear()} Thanh Cong JSC. </div>
           <div className="flex items-center gap-2">
             <span className="h-px w-8 bg-gold/60" />
             <span>Giải pháp kỹ thuật hạ tầng giao thông</span>

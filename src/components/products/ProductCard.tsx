@@ -1,37 +1,12 @@
 import { useState } from "react";
 import { ArrowRight, ChevronDown, type LucideIcon } from "lucide-react";
 import * as Icons from "lucide-react";
-
-export type SubCategory = {
-  name: string;
-  icon?: string;
-  description: string;
-  features: string[];
-  concept: string;
-  structure?: string[];
-  technicalHighlights?: string[];
-  classification?: string[];
-  variants?: Array<{ name: string; description: string; features: string[] }>;
-  applications: string[];
-};
-
-export type Category = {
-  id: string;
-  nameEn: string;
-  nameVn: string;
-  image: string;
-  icon: string;
-  accent: string;
-  shortDescription: string;
-  description: string;
-  catalogue: string;
-  subcategories: SubCategory[];
-  applications: string[];
-};
+import { Link } from "@tanstack/react-router";
+import type { Category } from "@/types/products";
+import { getSubcategorySlug } from "@/lib/product-utils";
 
 function Ico({ name, className }: { name: string; className?: string }) {
-  const Comp =
-    (Icons as unknown as Record<string, LucideIcon>)[name] ?? Icons.Circle;
+  const Comp = (Icons as unknown as Record<string, LucideIcon>)[name] ?? Icons.Circle;
   return <Comp className={className} aria-hidden />;
 }
 
@@ -43,13 +18,7 @@ const gradientMap: Record<string, string> = {
   maintenance: "from-slate-600 to-slate-400",
 };
 
-export function ProductCard({
-  category,
-  index,
-}: {
-  category: Category;
-  index: number;
-}) {
+export function ProductCard({ category, index }: { category: Category; index: number }) {
   const [open, setOpen] = useState(false);
   const gradientClass = gradientMap[category.id] || category.accent;
 
@@ -69,7 +38,9 @@ export function ProductCard({
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-1200 group-hover:scale-110"
           loading="lazy"
         />
-        <div className={`absolute inset-0 bg-gradient-to-t ${category.accent} mix-blend-multiply`} />
+        <div
+          className={`absolute inset-0 bg-gradient-to-t ${category.accent} mix-blend-multiply`}
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         <div className="absolute top-4 left-4 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white/95 backdrop-blur text-deep shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
           <Ico name={category.icon} className="w-6 h-6" />
@@ -89,9 +60,7 @@ export function ProductCard({
 
       {/* Body */}
       <div className="flex flex-col flex-1 p-6">
-        <p className="text-sm text-ink-soft leading-relaxed line-clamp-2">
-          {category.description}
-        </p>
+        <p className="text-sm text-ink-soft leading-relaxed line-clamp-2">{category.description}</p>
 
         {/* Sub-categories pills */}
         <div className="mt-5">
@@ -116,19 +85,20 @@ export function ProductCard({
             <div className="overflow-hidden">
               <ul className="flex flex-col gap-1.5">
                 {category.subcategories.map((s, i) => (
-                  <li
-                    key={s.name}
-                    className="flex items-center gap-2.5 rounded-lg bg-secondary/60 px-3 py-2 text-sm text-ink hover:bg-gold/10 hover:text-deep transition-colors"
-                    style={{
-                      animation: open
-                        ? `fade-in 0.4s ease-out ${i * 50}ms both`
-                        : "none",
-                    }}
-                  >
-                    <span className="inline-flex items-center justify-center w-7 h-7 rounded-md bg-white text-gold shadow-sm">
-                      <Ico name={s.icon || "Circle"} className="w-3.5 h-3.5" />
-                    </span>
-                    <span className="font-medium">{s.name}</span>
+                  <li key={s.name}>
+                    <Link
+                      to="/products/$categoryId/$subcategorySlug"
+                      params={{ categoryId: category.id, subcategorySlug: getSubcategorySlug(s) }}
+                      className="flex items-center gap-2.5 rounded-lg bg-secondary/60 px-3 py-2 text-sm text-ink hover:bg-gold/10 hover:text-deep transition-colors cursor-pointer"
+                      style={{
+                        animation: open ? `fade-in 0.4s ease-out ${i * 50}ms both` : "none",
+                      }}
+                    >
+                      <span className="inline-flex items-center justify-center w-7 h-7 rounded-md bg-white text-gold shadow-sm">
+                        <Ico name={s.icon || "Circle"} className="w-3.5 h-3.5" />
+                      </span>
+                      <span className="font-medium">{s.name}</span>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -138,13 +108,15 @@ export function ProductCard({
           {!open && (
             <div className="mt-3 flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {category.subcategories.slice(0, 4).map((s) => (
-                <span
+                <Link
                   key={s.name}
-                  className="shrink-0 inline-flex items-center gap-1.5 rounded-full bg-secondary px-3 py-1.5 text-xs font-medium text-deep border border-transparent hover:border-gold/40 hover:bg-gold/5 transition"
+                  to="/products/$categoryId/$subcategorySlug"
+                  params={{ categoryId: category.id, subcategorySlug: getSubcategorySlug(s) }}
+                  className="shrink-0 inline-flex items-center gap-1.5 rounded-full bg-secondary px-3 py-1.5 text-xs font-medium text-deep border border-transparent hover:border-gold/40 hover:bg-gold/5 transition cursor-pointer"
                 >
                   <Ico name={s.icon || "Circle"} className="w-3 h-3 text-gold" />
                   {s.name}
-                </span>
+                </Link>
               ))}
             </div>
           )}

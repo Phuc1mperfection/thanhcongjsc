@@ -28,7 +28,7 @@ interface Product {
   applications: string[];
 }
 
-export function ProductCatalog() {
+export function ProductList() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isInView, setIsInView] = useState(false);
 
