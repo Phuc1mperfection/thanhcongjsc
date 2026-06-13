@@ -14,6 +14,12 @@
         {
           "name": "Gối chậu (Pot Bearing)",
           "icon": "AlignVerticalSpaceAround",
+          "images": [
+            "/images/bridge-bearings.jpg",
+            "/images/bridge-bearings/pot-bearing/1.jpg"
+
+
+          ],
           "description": "Loại gối cầu chịu tải trọng lớn, sử dụng cao su đàn hồi bị giam kín trong chậu thép để truyền tải trọng thẳng đứng từ kết cấu nhịp xuống trụ, mố cầu.",
           "features": [
             "Khả năng chịu tải lớn, phù hợp cho cầu trung và cầu lớn",
@@ -51,6 +57,9 @@
         {
           "name": "Gối chỏm cầu (Spherical Bearing)",
           "icon": "CircleDot",
+          "images": [
+            "/images/bridge-bearings.jpg"
+          ],
           "description": "Loại gối cầu chịu tải trọng rất lớn, sử dụng bề mặt chỏm cầu bằng thép kết hợp với vật liệu trượt ma sát thấp (PTFE/Inox) để truyền tải trọng từ kết cấu nhịp xuống trụ, mố cầu, đồng thời cho phép chuyển vị quay đa hướng và chuyển vị ngang theo yêu cầu thiết kế.",
           "features": [
             "Khả năng chịu tải rất lớn, phù hợp cho cầu nhịp dài và cầu tải trọng nặng",
@@ -83,6 +92,9 @@
         {
           "name": "Gối cao su đàn hồi (Elastomeric Rubber Bearing)",
           "icon": "Layers",
+          "images": [
+            "/images/bridge-bearings.jpg"
+          ],
           "description": "Loại gối cầu sử dụng cao su tự nhiên hoặc cao su tổng hợp kết hợp với bản thép gia cường, có khả năng truyền tải trọng đứng, đồng thời cho phép quay và chuyển vị ngang nhờ đặc tính đàn hồi của vật liệu cao su.",
           "features": [
             "Đàn hồi cao, cho phép quay và chuyển vị tự nhiên của kết cấu",
@@ -112,6 +124,9 @@
         {
           "name": "Gối đĩa (Disc Bearing)",
           "icon": "Circle",
+          "images": [
+            "/images/bridge-bearings.jpg"
+          ],
           "description": "Loại gối cầu sử dụng đĩa đàn hồi polymer (thường là polyurethane) làm bộ phận chịu nén chính. Dưới tải trọng đứng lớn, đĩa đàn hồi bị nén nhưng không giãn nở theo phương ngang, cho phép quay tự do giữa kết cấu nhịp và mố/trụ cầu.",
           "features": [
             "Chịu tải trọng rất lớn, phù hợp cầu nhịp trung và lớn",
@@ -151,7 +166,9 @@
       "id": "expansion-joints",
       "nameEn": "Expansion Joints",
       "nameVn": "Khe co giãn",
-      "image": "expansion",
+      "images": [
+        "/images/expansion-joints.jpg"
+      ],
       "icon": "PanelTopBottomDashed",
       "accent": "from-blue-600/90 to-blue-400/40",
       "shortDescription": "Khe co giãn là bộ phận kỹ thuật được bố trí tại các vị trí gián đoạn của kết cấu công trình (như cầu, đường, nhà, tường chắn…) nhằm cho phép các cấu kiện giãn nở hoặc co lại do ảnh hưởng của nhiệt độ, tải trọng, co ngót vật liệu hoặc chuyển vị, đồng thời đảm bảo an toàn kết cấu, tính liên tục khai thác và độ bền lâu dài của công trình.",
@@ -161,6 +178,7 @@
         {
           "name": "Khe co giãn dạng cao su (Rubber Expansion Joints)",
           "icon": "ArrowLeftRight",
+          "image": "/images/expansion-joints.jpg",
           "description": "Sử dụng dải cao su đàn hồi, chống thấm nước và có khả năng biến dạng tốt.",
           "features": [
             "Độ đàn hồi cao, cho phép chuyển vị theo phương ngang và phương đứng",
@@ -192,6 +210,7 @@
         {
           "name": "Khe co giãn dạng ray (Rail-Type Expansion Joints)",
           "icon": "Minus",
+          "image": "/images/expansion-joints.jpg",
           "description": "Sử dụng hệ ray thép kết hợp với cao su đàn hồi, được thiết kế để đáp ứng chuyển vị lớn do giãn nở nhiệt, co ngót, tải trọng xe và biến dạng kết cấu.",
           "features": [
             "Khả năng chịu tải lớn, phù hợp giao thông nặng và lưu lượng cao",
@@ -224,6 +243,7 @@
         {
           "name": "Khe co giãn răng lược (Finger Expansion Joints)",
           "icon": "Zap",
+          "image": "/images/expansion-joints.jpg",
           "description": "Sử dụng các bản thép dạng răng lược ăn khớp với nhau, cho phép mặt cầu giãn nở và co ngót với chuyển vị rất lớn do nhiệt độ, tải trọng xe và biến dạng kết cấu.",
           "features": [
             "Cho phép chuyển vị rất lớn (có thể lên đến hàng trăm mm)",
@@ -256,6 +276,7 @@
         {
           "name": "Khe co giãn dạng mô đun (Modular-Type Expansion Joints)",
           "icon": "Grid3x3",
+          "image": "/images/expansion-joints.jpg",
           "description": "Được cấu tạo từ nhiều dầm ray thép song song (module) kết hợp với cao su đàn hồi và hệ thống liên kết trung gian, cho phép đáp ứng chuyển vị rất lớn do giãn nở nhiệt, co ngót, tải trọng xe và biến dạng kết cấu.",
           "features": [
             "Khả năng chuyển vị rất lớn, có thể thiết kế theo yêu cầu từng dự án",

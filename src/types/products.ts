@@ -15,6 +15,8 @@ export type SubCategory = {
   classification?: string[];
   variants?: Variant[];
   applications: string[];
+  image?: string;
+  images?: string[];
 };
 
 export type Category = {
