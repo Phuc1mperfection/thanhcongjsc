@@ -24,35 +24,25 @@ export function ProductCard({ category, index }: { category: Category; index: nu
 
   return (
     <article
-      className="group relative flex flex-col rounded-2xl border border-deep/10 bg-card overflow-hidden shadow-(--shadow-card) transition-all duration-500 hover:-translate-y-2 hover:shadow-[var(--shadow-card-hover)] hover:border-gold/40 animate-fade-in opacity-0"
-      style={{
-        animationDelay: `${index * 110}ms`,
-        animationFillMode: "forwards",
-      }}
+      className="group relative flex flex-col rounded-2xl border border-deep/10 bg-card overflow-hidden shadow-(--shadow-card) transition-all duration-500 hover:-translate-y-2 hover:shadow-[var(--shadow-card-hover)] hover:border-gold/40"
     >
       {/* Image */}
-      <div className="relative h-52 overflow-hidden">
+      <div className="relative h-56 md:h-64 overflow-hidden">
         <img
-          src={`/images/${category.id}.jpg`}
+          src={category.image}
           alt={`${category.nameVn} - ${category.nameEn}`}
-          className="absolute inset-0 w-full h-full object-cover transition-transform duration-1200 group-hover:scale-110"
+          width={1024}
+          height={768}
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           loading="lazy"
         />
-        <div
-          className={`absolute inset-0 bg-gradient-to-t ${category.accent} mix-blend-multiply`}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-        <div className="absolute top-4 left-4 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white/95 backdrop-blur text-deep shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
-          <Ico name={category.icon} className="w-6 h-6" />
+        <div className="absolute inset-0 bg-gradient-to-t from-deep/70 via-deep/10 to-transparent" />
+        <div className="absolute top-4 left-4 inline-flex items-center gap-2 rounded-full bg-white/95 backdrop-blur px-3 py-1.5 text-xs font-semibold text-deep">
+          <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+          {category.nameEn}
         </div>
-        <div className="absolute top-4 right-4 text-[10px] uppercase tracking-[0.2em] text-white/90 bg-black/30 backdrop-blur px-2.5 py-1 rounded-full">
-          {String(index + 1).padStart(2, "0")}
-        </div>
-        <div className="absolute bottom-4 left-5 right-5">
-          <div className="text-xs uppercase tracking-widest text-gold/95 font-semibold">
-            {category.nameEn}
-          </div>
-          <h3 className="mt-1 text-2xl font-display font-bold text-white leading-tight">
+        <div className="absolute bottom-4 left-4 right-4">
+          <h3 className="text-white font-display font-bold text-2xl leading-tight">
             {category.nameVn}
           </h3>
         </div>
