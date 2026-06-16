@@ -67,7 +67,6 @@ function ProductDetailPage() {
       <main>
         <ProductDetail category={category} subcategory={subcategory} />
       </main>
-      <Footer />
     </div>
   );
 }

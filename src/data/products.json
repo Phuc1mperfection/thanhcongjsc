@@ -178,7 +178,10 @@
         {
           "name": "Khe co giãn dạng cao su (Rubber Expansion Joints)",
           "icon": "ArrowLeftRight",
-          "image": "/images/expansion-joints.jpg",
+          "images": [
+            "/images/expansion-joints/rubber-expansion-joints/2.jpg",
+            "/images/expansion-joints/rubber-expansion-joints/3.jpg"
+          ],
           "description": "Sử dụng dải cao su đàn hồi, chống thấm nước và có khả năng biến dạng tốt.",
           "features": [
             "Độ đàn hồi cao, cho phép chuyển vị theo phương ngang và phương đứng",
