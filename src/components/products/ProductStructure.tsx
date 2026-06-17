@@ -1,10 +1,10 @@
-export function ProductStructure({ structure }: { structure: string[] }) {
+export function ProductStructure({ structure, sectionNumber }: { structure: string[]; sectionNumber: number }) {
   if (!structure?.length) return null;
   return (
     <section className="py-12 md:py-16 bg-secondary/40">
       <div className="container-tc">
         <header className="mb-8">
-          <div className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">03</div>
+          <div className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">{String(sectionNumber).padStart(2, "0")}</div>
           <h2 className="mt-2 text-2xl md:text-3xl font-display font-bold text-deep">
             Cấu tạo & Thành phần
           </h2>

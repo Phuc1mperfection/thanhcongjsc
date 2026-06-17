@@ -130,14 +130,18 @@ export function ProductCard({ category, index }: { category: Category; index: nu
         </div>
 
         {/* CTA */}
-        <a
-          href="#contact"
+        <Link
+          to="/products/$categoryId/$subcategorySlug"
+          params={{
+            categoryId: category.id,
+            subcategorySlug: getSubcategorySlug(category.subcategories[0]),
+          }}
           className="mt-6 inline-flex items-center justify-between gap-2 rounded-md bg-deep text-deep-foreground px-4 py-3 text-sm font-semibold hover:bg-gold hover:text-gold-foreground transition-colors group/btn"
           aria-label={`Tìm hiểu thêm về ${category.nameVn}`}
         >
           <span>Tìm hiểu thêm</span>
           <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
-        </a>
+        </Link>
       </div>
 
       {/* Glow on hover */}

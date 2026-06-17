@@ -15,8 +15,7 @@
           "name": "Gối chậu (Pot Bearing)",
           "icon": "AlignVerticalSpaceAround",
           "images": [
-            "/images/bridge-bearings.jpg",
-            "/images/bridge-bearings/pot-bearing/1.jpg"
+            "/images/bridge-bearings/pot-bearings/2.jpg"
 
 
           ],
@@ -58,7 +57,10 @@
           "name": "Gối chỏm cầu (Spherical Bearing)",
           "icon": "CircleDot",
           "images": [
-            "/images/bridge-bearings.jpg"
+            "/images/bridge-bearings/spherical-bearings/1.png",
+            "/images/bridge-bearings/spherical-bearings/3.jpg",
+            "/images/bridge-bearings/spherical-bearings/2.jpg"
+
           ],
           "description": "Loại gối cầu chịu tải trọng rất lớn, sử dụng bề mặt chỏm cầu bằng thép kết hợp với vật liệu trượt ma sát thấp (PTFE/Inox) để truyền tải trọng từ kết cấu nhịp xuống trụ, mố cầu, đồng thời cho phép chuyển vị quay đa hướng và chuyển vị ngang theo yêu cầu thiết kế.",
           "features": [
@@ -93,7 +95,7 @@
           "name": "Gối cao su đàn hồi (Elastomeric Rubber Bearing)",
           "icon": "Layers",
           "images": [
-            "/images/bridge-bearings.jpg"
+            "/images/elastomeric-bearings/1.png"
           ],
           "description": "Loại gối cầu sử dụng cao su tự nhiên hoặc cao su tổng hợp kết hợp với bản thép gia cường, có khả năng truyền tải trọng đứng, đồng thời cho phép quay và chuyển vị ngang nhờ đặc tính đàn hồi của vật liệu cao su.",
           "features": [

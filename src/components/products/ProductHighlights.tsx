@@ -1,12 +1,12 @@
 import { Sparkles } from "lucide-react";
 
-export function ProductHighlights({ highlights }: { highlights: string[] }) {
+export function ProductHighlights({ highlights, sectionNumber }: { highlights: string[]; sectionNumber: number }) {
   if (!highlights?.length) return null;
   return (
     <section className="py-12 md:py-16">
       <div className="container-tc">
         <header className="mb-8">
-          <div className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">04</div>
+          <div className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">{String(sectionNumber).padStart(2, "0")}</div>
           <h2 className="mt-2 text-2xl md:text-3xl font-display font-bold text-deep">
             Đặc tính kỹ thuật
           </h2>
@@ -30,13 +30,13 @@ export function ProductHighlights({ highlights }: { highlights: string[] }) {
   );
 }
 
-export function ProductClassification({ items }: { items: string[] }) {
+export function ProductClassification({ items, sectionNumber }: { items: string[]; sectionNumber: number }) {
   if (!items?.length) return null;
   return (
     <section className="py-12 md:py-16 bg-secondary/40">
       <div className="container-tc">
         <header className="mb-8">
-          <div className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">05</div>
+          <div className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">{String(sectionNumber).padStart(2, "0")}</div>
           <h2 className="mt-2 text-2xl md:text-3xl font-display font-bold text-deep">
             Phân loại sản phẩm
           </h2>

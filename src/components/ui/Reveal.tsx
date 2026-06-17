@@ -35,7 +35,7 @@ export function Reveal({
     <As
       ref={ref as never}
       style={{ transitionDelay: `${delay}ms` }}
-      className={`transition-all duration-[800ms] ease-out will-change-transform ${
+      className={`transition-all duration-800 ease-out will-change-transform ${
         shown ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       } ${className}`}
     >

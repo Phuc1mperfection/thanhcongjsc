@@ -122,17 +122,14 @@ export function ProductImageGallery({
     <section className="py-6 md:py-10">
       <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_112px] xl:grid-cols-[minmax(0,1fr)_128px]">
         {/* Main image */}
-        <div className="group relative aspect-[4/3] md:aspect-[16/10] xl:aspect-[16/9] overflow-hidden rounded-[2rem] border border-deep/10 bg-card shadow-[var(--shadow-card)]">
-          <div
-            key={active}
-            className="absolute inset-0 animate-in fade-in zoom-in-95 duration-500"
-          >
+        <div className="group relative aspect-[4/3] md:aspect-[16/10] xl:aspect-[4/3] overflow-hidden rounded-[2rem] border border-deep/10 bg-white shadow-[var(--shadow-card)]">
+          <div key={active} className="absolute inset-0 animate-in fade-in zoom-in-95 duration-500">
             <ImageOrPlaceholder
               src={main}
               category={category}
               subcategory={subcategory}
               iconSize="w-28 h-28 md:w-40 md:h-40"
-              imageClassName="transition-transform duration-700 ease-out group-hover:scale-105"
+              imageClassName="transition-transform duration-700 ease-out group-hover:scale-[1.02]"
             />
           </div>
 
