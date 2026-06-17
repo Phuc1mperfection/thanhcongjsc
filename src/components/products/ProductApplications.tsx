@@ -1,12 +1,12 @@
 import { MapPin } from "lucide-react";
 
-export function ProductApplications({ applications }: { applications: string[] }) {
+export function ProductApplications({ applications, sectionNumber }: { applications: string[]; sectionNumber: number }) {
   if (!applications?.length) return null;
   return (
     <section className="py-12 md:py-16 bg-secondary/40">
       <div className="container-tc">
         <header className="mb-8">
-          <div className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">07</div>
+          <div className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">{String(sectionNumber).padStart(2, "0")}</div>
           <h2 className="mt-2 text-2xl md:text-3xl font-display font-bold text-deep">
             Ứng dụng thực tế
           </h2>

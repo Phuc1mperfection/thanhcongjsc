@@ -21,6 +21,14 @@ export function ProductDetail({
   const slug = getSubcategorySlug(subcategory);
   const related = category.subcategories.filter((s) => getSubcategorySlug(s) !== slug).slice(0, 4);
 
+  let sectionIndex = 1;
+  const featuresSectionNumber = subcategory.features?.length ? ++sectionIndex : 0;
+  const structureSectionNumber = subcategory.structure?.length ? ++sectionIndex : 0;
+  const highlightsSectionNumber = subcategory.technicalHighlights?.length ? ++sectionIndex : 0;
+  const classificationSectionNumber = subcategory.classification?.length ? ++sectionIndex : 0;
+  const variantsSectionNumber = subcategory.variants?.length ? ++sectionIndex : 0;
+  const applicationsSectionNumber = subcategory.applications?.length ? ++sectionIndex : 0;
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-secondary/30 to-white">
       <ProductHero category={category} subcategory={subcategory} />
@@ -53,12 +61,24 @@ export function ProductDetail({
               </div>
             </section>
 
-            <ProductFeatures features={subcategory.features} />
-            <ProductStructure structure={subcategory.structure ?? []} />
-            <ProductHighlights highlights={subcategory.technicalHighlights ?? []} />
-            <ProductClassification items={subcategory.classification ?? []} />
-            <ProductVariants variants={subcategory.variants} />
-            <ProductApplications applications={subcategory.applications} />
+            {featuresSectionNumber > 0 && (
+              <ProductFeatures features={subcategory.features} sectionNumber={featuresSectionNumber} />
+            )}
+            {structureSectionNumber > 0 && (
+              <ProductStructure structure={subcategory.structure ?? []} sectionNumber={structureSectionNumber} />
+            )}
+            {highlightsSectionNumber > 0 && (
+              <ProductHighlights highlights={subcategory.technicalHighlights ?? []} sectionNumber={highlightsSectionNumber} />
+            )}
+            {classificationSectionNumber > 0 && (
+              <ProductClassification items={subcategory.classification ?? []} sectionNumber={classificationSectionNumber} />
+            )}
+            {variantsSectionNumber > 0 && (
+              <ProductVariants variants={subcategory.variants} sectionNumber={variantsSectionNumber} />
+            )}
+            {applicationsSectionNumber > 0 && (
+              <ProductApplications applications={subcategory.applications} sectionNumber={applicationsSectionNumber} />
+            )}
 
             {/* Catalogue download */}
             <section className="py-10">

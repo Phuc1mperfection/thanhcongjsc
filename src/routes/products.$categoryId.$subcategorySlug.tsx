@@ -7,8 +7,8 @@ import { findProduct } from "@/lib/products";
 export const Route = createFileRoute("/products/$categoryId/$subcategorySlug")({
   loader: ({ params }) => {
     const found = findProduct(params.categoryId, params.subcategorySlug);
-    if (!found) throw notFound();
-    return found;
+    if (!found || !found.subcategory) throw notFound();
+    return { category: found.category, subcategory: found.subcategory };
   },
   head: ({ loaderData, params }) => {
     if (!loaderData) {

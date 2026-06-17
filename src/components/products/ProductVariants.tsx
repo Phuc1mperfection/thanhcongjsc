@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ChevronDown, Check } from "lucide-react";
 import type { Variant } from "@/lib/products";
 
-export function ProductVariants({ variants }: { variants?: Variant[] }) {
+export function ProductVariants({ variants, sectionNumber }: { variants?: Variant[]; sectionNumber: number }) {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
   if (!variants?.length) return null;
 
@@ -10,7 +10,7 @@ export function ProductVariants({ variants }: { variants?: Variant[] }) {
     <section className="py-12 md:py-16">
       <div className="container-tc">
         <header className="mb-8">
-          <div className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">06</div>
+          <div className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">{String(sectionNumber).padStart(2, "0")}</div>
           <h2 className="mt-2 text-2xl md:text-3xl font-display font-bold text-deep">
             Các biến thể
           </h2>
