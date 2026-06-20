@@ -48,8 +48,7 @@ export function ProductPlaceholder({
         {label !== "" && (
           <>
             <div className="mt-3 inline-flex items-center gap-1.5 text-[10px] uppercase tracking-[0.25em] font-semibold text-white/80">
-              <ImageIcon className="w-3 h-3" />
-              {label ?? "Hình ảnh sản phẩm"}
+              
             </div>
 
             <div className="mt-2 font-display font-bold text-base md:text-lg leading-tight max-w-[80%]">

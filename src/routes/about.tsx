@@ -32,6 +32,7 @@ import {
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -908,13 +909,24 @@ function MainProducts() {
 
 /* ---------------- Organization Chart ---------------- */
 function OrgChart() {
-  const departments = [
-    "Phòng Kinh doanh",
-    "Phòng Kỹ thuật",
-    "Phòng Dự án",
-    "Phòng Cung ứng",
-    "Phòng Hành chính – Kế toán",
+  const divisions = [
+    {
+      name: "Khối Kinh doanh",
+      departments: ["Phòng Phát triển Dự án", "Phòng Marketing"],
+    },
+    {
+      name: "Khối Kỹ thuật",
+      departments: ["Phòng Kỹ thuật", "Phòng R&D"],
+    },
+    {
+      name: "Khối Xuất nhập khẩu",
+      departments: ["Phòng Mua hàng", "Kho Logistics"],
+    },
   ];
+
+  const nodeClass =
+    "relative z-10 flex min-h-20 items-center justify-center rounded-xl border bg-white px-5 py-4 text-center font-display text-sm font-bold uppercase leading-snug text-deep shadow-md md:text-base";
+
   return (
     <section id="so-do-to-chuc" className="relative section-pad bg-secondary/60 scroll-mt-32">
       <div className="container-tc">
@@ -923,40 +935,95 @@ function OrgChart() {
             <span className="eyebrow eyebrow-line">Tổ chức</span>
           </Reveal>
           <Reveal delay={100}>
-            <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-deep">
+            <h2 className="mt-4 text-balance font-display text-3xl font-bold text-deep md:text-4xl lg:text-5xl">
               Sơ đồ tổ chức
             </h2>
           </Reveal>
         </div>
 
         <Reveal delay={160}>
-          <div className="mt-14 flex flex-col items-center">
-            {/* Top node */}
-            <div className="relative z-10 rounded-2xl bg-deep text-white px-8 py-5 shadow-card-hover text-center min-w-[240px]">
-              <div className="text-[11px] uppercase tracking-widest text-gold">Lãnh đạo</div>
-              <div className="mt-1 font-display text-xl font-bold">Ban Giám đốc</div>
+          <div className="mx-auto mt-14 max-w-6xl">
+            {/* Hội đồng quản trị và kiểm soát nội bộ */}
+            <div className="relative flex flex-col items-center pb-10 md:pb-12">
+              <div className="absolute bottom-0 left-1/2 top-16 w-px -translate-x-1/2 bg-deep/25" />
+              <div className="relative z-10 min-w-64 overflow-hidden rounded-xl border border-deep bg-deep px-8 py-5 text-center font-display text-lg font-bold uppercase leading-snug text-white shadow-lg">
+                <span className="absolute inset-x-0 top-0 h-1 bg-gold" />
+                <span className="block text-xs font-semibold text-gold">Cơ quan quản trị</span>
+                <span className="mt-1 block">Hội đồng Quản trị</span>
+              </div>
+
+              <div className="relative z-10 mt-7 w-full md:absolute md:bottom-5 md:left-0 md:mt-0 md:w-[calc(50%-7.5rem)]">
+                <div className="absolute right-[-7.5rem] top-1/2 hidden w-[9.5rem] border-t border-dashed border-deep/30 md:block" />
+                <div className={cn(nodeClass, "mx-auto max-w-60 border-deep border-l-4 md:mr-8")}>
+                  Kiểm soát nội bộ
+                </div>
+              </div>
             </div>
 
-            {/* connector */}
-            <div className="h-10 w-px bg-gold" />
-            <div className="hidden md:block h-px w-[80%] max-w-4xl bg-gold/60" />
+            {/* Ban giám đốc */}
+            <div className="relative flex justify-center pb-12">
+              <div className="absolute bottom-0 left-1/2 top-10 w-px -translate-x-1/2 bg-deep/25" />
+              <div className={cn(nodeClass, "min-w-60 border-deep bg-deep text-white")}>
+                Ban Giám đốc
+              </div>
+            </div>
 
-            {/* Departments */}
-            <div className="mt-0 md:-mt-px grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5 w-full max-w-5xl">
-              {departments.map((d, i) => (
-                <Reveal key={d} delay={i * 100}>
-                  <div className="relative pt-10">
-                    <span className="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 h-10 w-px bg-gold/60" />
-                    <div className="group rounded-2xl bg-white border border-border p-5 text-center shadow-card hover:shadow-card-hover hover:border-gold hover:-translate-y-1 transition-all duration-500">
-                      <div className="mx-auto grid place-items-center h-10 w-10 rounded-xl bg-secondary text-deep group-hover:bg-gold group-hover:text-deep transition">
-                        <Briefcase size={18} />
-                      </div>
-                      <div className="mt-3 font-display text-sm md:text-base font-semibold text-deep">
-                        {d}
-                      </div>
-                    </div>
+            {/* Các phòng chức năng */}
+            <div className="relative mx-auto grid max-w-3xl grid-cols-1 gap-6 pb-12 sm:grid-cols-2 sm:gap-12 md:px-16">
+              <span className="absolute bottom-0 left-1/2 top-0 hidden w-px -translate-x-1/2 bg-deep/25 md:block" />
+              <div className="absolute left-1/4 right-1/4 top-0 hidden border-t border-deep/25 sm:block" />
+              {["Tài chính Kế toán", "Hành chính Nhân sự"].map((department) => (
+                <div key={department} className="relative pt-8">
+                  <span className="absolute left-1/2 top-0 hidden h-8 w-px -translate-x-1/2 bg-deep/25 sm:block" />
+                  <div
+                    className={cn(
+                      nodeClass,
+                      "mx-auto max-w-64 border-deep/20 border-t-4 border-t-gold",
+                    )}
+                  >
+                    {department}
                   </div>
-                </Reveal>
+                </div>
+              ))}
+            </div>
+
+            {/* Các khối chuyên môn và đơn vị trực thuộc */}
+            <div className="relative grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-8">
+              <div className="absolute left-1/6 right-1/6 top-0 hidden border-t border-deep/25 md:block" />
+              <span className="absolute -top-12 left-1/2 hidden h-12 w-px -translate-x-1/2 bg-deep/25 md:block" />
+              {divisions.map((division) => (
+                <div key={division.name} className="relative pt-8">
+                  <span className="absolute left-1/2 top-0 hidden h-8 w-px -translate-x-1/2 bg-deep/25 md:block" />
+                  <div
+                    className={cn(
+                      nodeClass,
+                      "mx-auto max-w-64 border-deep/30 border-t-4 border-t-deep",
+                    )}
+                  >
+                    {division.name}
+                  </div>
+
+                  <div className="relative mx-auto mt-0 max-w-64 border-l border-deep/25 pt-8">
+                    {division.departments.map((department, index) => (
+                      <div
+                        key={department}
+                        className={
+                          index === division.departments.length - 1 ? "relative" : "relative pb-8"
+                        }
+                      >
+                        <span className="absolute left-0 top-1/2 w-5 border-t border-deep/25" />
+                        <div
+                          className={cn(
+                            nodeClass,
+                            "ml-5 min-h-18 border-deep/15 bg-white/80 px-3 text-sm font-semibold shadow-sm",
+                          )}
+                        >
+                          {department}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </div>

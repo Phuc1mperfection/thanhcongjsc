@@ -23,9 +23,7 @@ export function ProductCard({ category, index }: { category: Category; index: nu
   const gradientClass = gradientMap[category.id] || category.accent;
 
   return (
-    <article
-      className="group relative flex flex-col rounded-2xl border border-deep/10 bg-card overflow-hidden shadow-(--shadow-card) transition-all duration-500 hover:-translate-y-2 hover:shadow-[var(--shadow-card-hover)] hover:border-gold/40"
-    >
+    <article className="group relative flex flex-col rounded-2xl border border-deep/10 bg-card overflow-hidden shadow-(--shadow-card) transition-all duration-500 hover:-translate-y-2 hover:shadow-[var(--shadow-card-hover)] hover:border-gold/40">
       {/* Image */}
       <div className="relative h-56 md:h-64 overflow-hidden">
         <img
