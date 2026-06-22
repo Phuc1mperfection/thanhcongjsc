@@ -21,6 +21,7 @@ import {
   MapPin,
 } from "lucide-react";
 import { Reveal } from "../ui/Reveal";
+import catalogueCover from "@/assets/catalogue-cover.jpg?url";
 
 export function Hero() {
   return (
@@ -534,7 +535,7 @@ export function Catalogue() {
                 <div className="absolute -inset-3 bg-deep/5 rounded-2xl -rotate-3" />
                 <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-[var(--shadow-card-hover)] ring-1 ring-deep/10 bg-deep">
                   <img
-                    src="src/assets/catalogue-cover.jpg"
+                    src={catalogueCover}
                     alt="Catalogue Thanh Cong JSC"
                     loading="lazy"
                     className="absolute inset-0 w-full h-full object-cover opacity-70"
@@ -543,7 +544,7 @@ export function Catalogue() {
                   <div className="absolute inset-0 p-8 flex flex-col justify-between text-white">
                     <div>
                       <div className="text-[10px] uppercase tracking-[0.25em] text-gold">
-                        Catalogue 2025
+                        Catalogue 2026
                       </div>
                       <div className="mt-3 font-display font-bold text-2xl leading-tight">
                         Sản phẩm & Giải pháp kỹ thuật hạ tầng giao thông
